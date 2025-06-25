@@ -5,9 +5,14 @@ function LikeButton()
     let [ isLike , setIsLike ] = useState(false);
     let [ clicks , setClicks ] = useState(0);
 
+    console.log("Component is rendered...");
+    console.log(`clicks : ${clicks}`);
+        
     let toggleLike = () => {
         setIsLike(!isLike);
-        setClicks(clicks+=1);
+        setClicks(clicks+1);
+        console.log('updated value of clicks = ',{clicks});
+
     }
 
     let styles = { color : "red"};
